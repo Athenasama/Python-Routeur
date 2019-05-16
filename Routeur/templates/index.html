@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Routeur</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th>
+                    VRF
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    ip
+                </th>
+                <th>
+                    Plage
+                </th>
+                <th>
+                    Connexion
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in datas %}
+                <tr>
+                    <td>
+                        {{ user[1] }}
+                    </td>
+                    <td>
+                        {{ user[2] }}
+                    </td>
+                    <td>
+                        {{ user[3] }}
+                    </td>
+                    <td>
+                        {{ user[4] }}
+                    </td>
+                    <td>
+                        {{ user[5] }}
+                    </td>
+                    <td>
+                        <a href="/user/{{ user[0] }}" class="button is-link">Update Client</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <section class="container create-user">
+        <a href="/create/user" class="button is-link">Create User</a>
+    </section>
+</body>
+</html>

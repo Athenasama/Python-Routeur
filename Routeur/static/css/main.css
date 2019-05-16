@@ -1,0 +1,44 @@
+html {
+    overflow: auto;
+}
+
+.table th, .table td {
+    text-align: center;
+    line-height: 3vh;
+}
+
+th {
+    font-size: 1.3rem;
+}
+
+td {
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+}
+
+button a {
+    margin: 0;
+}
+
+.create-user {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/** -- Form user -- **/
+.form-user {
+    width: 30vw;
+    margin-top: 5%;
+}
+
+.form-user .is-grouped {
+    margin-top: 3%;
+    justify-content: flex-end;
+}
